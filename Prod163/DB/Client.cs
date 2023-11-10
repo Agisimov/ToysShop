@@ -14,6 +14,12 @@ namespace Prod163.DB
     
     public partial class Client
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Client()
+        {
+            this.Order = new HashSet<Order>();
+        }
+    
         public int Id { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
@@ -27,5 +33,7 @@ namespace Prod163.DB
         public string Password { get; set; }
     
         public virtual Gender Gender { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Order { get; set; }
     }
 }

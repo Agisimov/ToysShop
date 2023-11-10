@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="Ord" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="671*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Text="История покупок"
+                   Grid.Column="1"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   />
+        <DataGrid x:Name="gridOrd" AutoGenerateColumns="False" Grid.Column="1" Margin="0 50 0 0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Работник" Binding="{Binding раб}"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding клиент}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Cost}"/>
+                <DataGridTextColumn Header="количество" Binding="{Binding Data}"/>
+            </DataGrid.Columns>
+                 
+            
+            
+        </DataGrid>
+        <Button x:Name="exit" Content="назад хоуми" Grid.Column="0" Click="exit_Click" />
+
     </Grid>
 </Window>

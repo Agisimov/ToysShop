@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Prod163.DB;
+using static Prod163.DB.Order;
+using static Prod163.ClassHelper.EFClass;
 
 namespace Prod163.Windows
 {
@@ -22,6 +25,15 @@ namespace Prod163.Windows
         public Ord()
         {
             InitializeComponent();
+
+            gridOrd.ItemsSource = context.historyOrd.ToList();
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
     }
 }

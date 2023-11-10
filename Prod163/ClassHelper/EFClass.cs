@@ -9,7 +9,7 @@ namespace Prod163.ClassHelper
 {
     class EFClass
     {
-        public static Entities context { get; } = new Entities();
+        public static Entities context { get; set; } = new Entities();
 
     }
 }

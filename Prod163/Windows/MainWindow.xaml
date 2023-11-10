@@ -30,7 +30,7 @@
                     Content="Заказы"
                      Width="250"
                     Margin="0 30 0 0"
-                    Height="25"
+                    Height="25" Click="btnOrd_Click"
                     
                     />
 

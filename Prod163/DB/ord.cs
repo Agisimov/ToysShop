@@ -12,23 +12,11 @@ namespace Prod163.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class ord
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
-        {
-            this.ProductOrder = new HashSet<ProductOrder>();
-        }
-    
-        public int Id { get; set; }
-        public int IdClient { get; set; }
-        public int IdEmployee { get; set; }
         public decimal Cost { get; set; }
         public System.DateTime Data { get; set; }
-    
-        public virtual Client Client { get; set; }
-        public virtual Employee Employee { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductOrder> ProductOrder { get; set; }
+        public string раб { get; set; }
+        public string клиент { get; set; }
     }
 }

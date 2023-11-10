@@ -44,5 +44,12 @@ namespace Prod163
             employee.Show();
             this.Close();
         }
+
+        private void btnOrd_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.Ord ord = new Windows.Ord();
+            ord.Show();
+            this.Close();
+        }
     }
 }

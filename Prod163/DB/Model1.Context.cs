@@ -34,5 +34,7 @@ namespace Prod163.DB
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductOrder> ProductOrder { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<historyOrd> historyOrd { get; set; }
+        public virtual DbSet<ord> ord { get; set; }
     }
 }

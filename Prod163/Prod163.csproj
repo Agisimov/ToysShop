@@ -75,6 +75,9 @@
     <Compile Include="DB\Gender.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\historyOrd.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Manufacturer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -92,6 +95,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ord.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Order.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -117,6 +123,9 @@
     <Compile Include="Windows\Auth.xaml.cs">
       <DependentUpon>Auth.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\EdditEmpl.xaml.cs">
+      <DependentUpon>EdditEmpl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Employee.xaml.cs">
       <DependentUpon>Employee.xaml</DependentUpon>
     </Compile>
@@ -138,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EdditEmpl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using Prod163.DB;
 using static Prod163.ClassHelper.EFClass;
 
+using static Prod163.ClassHelper.AUF;
+
 namespace Prod163.Windows
 {
     /// <summary>
@@ -26,6 +28,9 @@ namespace Prod163.Windows
             InitializeComponent();
 
             gridEmpl.ItemsSource = context.Employee.ToList();
+
+          var emp = context.Employee.ToList();
+            
         }
 
         private void nazad_Click(object sender, RoutedEventArgs e)
@@ -40,6 +45,12 @@ namespace Prod163.Windows
             Windows.AddEmpl add = new AddEmpl();
             add.Show();
             this.Close();
+        }
+
+        private void edd_Click(object sender, RoutedEventArgs e)
+        {
+            context.SaveChanges();
+            MessageBox.Show("изменено");
         }
     }
 }
